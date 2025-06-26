@@ -33,6 +33,7 @@ Install the following Python libraries:
 
 ```bash
 pip install pandas openpyxl python-docx
+```
 ````
 
 ---
@@ -93,5 +94,4 @@ Built by \Digvijay Dutt – Python developer & automation enthusiast.
 
 Feel free to contribute or raise issues!
 
-```
 
