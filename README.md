@@ -1,4 +1,3 @@
-````markdown
 # 🧾 Insurance Claim Report Generator
 
 This repository contains two Python scripts that automate the generation of **Word documents** from insurance claim data stored in an **Excel file**. It uses `pandas`, `openpyxl`, and `python-docx` to read structured data and generate styled `.docx` reports, complete with headings, photographs, and company branding.
@@ -34,8 +33,6 @@ Install the following Python libraries:
 ```bash
 pip install pandas openpyxl python-docx
 ```
-````
-
 ---
 
 ## 🗂 Folder Structure
