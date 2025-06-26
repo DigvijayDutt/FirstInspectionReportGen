@@ -5,6 +5,7 @@ from docx.shared import Inches
 DataFrame = pd.read_excel("./data.xls")
 df = DataFrame.values
 columns = DataFrame.columns
+
 rooms = ["LIVING ROOM", "BEDROOM", "KITCHEN", "STORAGE"]
 
 for j in range(len(df)):
