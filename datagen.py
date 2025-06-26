@@ -1,8 +1,16 @@
+# Import Workbook class from openpyxl to create and manipulate Excel files (.xlsx)
 from openpyxl import Workbook
+
+# Create a new Excel workbook object
 wb = Workbook()
+
+# Get the active worksheet (by default, this is the first sheet in the workbook)
 ws = wb.active
+
+# Rename the worksheet title to "Claims" for better context
 ws.title = "Claims"
 
+# Define a list of dictionaries, where each dictionary contains one insurance claim's details.
 claims  = [
     {
         "INSURED/POLICYHOLDER": "ABIGAIL CARTER",
@@ -136,11 +144,20 @@ claims  = [
     }
 ]
 
+# Extract column headers from the first claim's keys
 headers = list(claims[0].keys())
+
+# Write the headers as the first row in the Excel sheet
 ws.append(headers)
 
-for claim in claims :
-    ws.append([claim[key] for key in headers])
+# Loop over each claim dictionary in the list
+for claim in claims:
+    # Create a row by accessing each value in the same order as the headers
+    row = [claim[key] for key in headers]
+    # Append the row to the worksheet
+    ws.append(row)
 
-wb.save("data.xls")
+# Save the workbook as an Excel file
+# Note: openpyxl creates .xlsx files, not .xls (which is an older Excel format)
+wb.save("data.xlsx")  # Fixed from "data.xls" to correct format
 print("file created successfully")
