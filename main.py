@@ -61,4 +61,4 @@ for j in range(len(df)):
                 print(f"Warning: Could not add image ./images/{rooms[k]}/{l + 1}.jpg - {e}")
 
     # Save the document with a unique name for each record
-    doc.save(f"new{j}.docx")
+    doc.save(f"First-Inspection-Report-CLAIM{df[j][3]}-{df[j][0]}-{df[j][1]}.docx")
